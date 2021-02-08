@@ -139,9 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function createGame(){
         time = 60;
-        if(score % 3 === 0 && score !== 0){
-            time -= 5;
-            showCardInterval -= 200;
+        if(score !== 0){
+            time -= 3;
+            showCardInterval -= 100;
         }
         choosenCards = [];
 
