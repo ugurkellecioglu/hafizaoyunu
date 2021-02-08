@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function flipCard(){
       this.childNodes[0].src = cardArray[this.cardId].link;
       choosenCards.push(this);
+
+      this.removeEventListener('click', flipCard);
+
       if(choosenCards.length === 2){
         
         setTimeout(checkMatch , 500);
